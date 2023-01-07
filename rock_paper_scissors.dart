@@ -10,6 +10,12 @@
  * else Invalid input
  */
 
+import 'dart:io';
+
 void main() {
-  print('Hello world!');
+  while (true) {
+    stdout.write('Rock, paper or scissors? (r/p/s) ');
+    final input = stdin.readLineSync();
+    print('You typed $input');
+  }
 }
