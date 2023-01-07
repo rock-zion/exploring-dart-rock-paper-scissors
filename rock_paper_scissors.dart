@@ -39,6 +39,18 @@ void main() {
       final random = randomNumberGenerator.nextInt(3);
       final aiMove = Move.values[random];
 
+      print('You played: $playerMove');
+      print('AI played: $aiMove');
+
+      if (playerMove == aiMove) {
+        print('It\s a draw');
+      } else if (playerMove == Move.rock && aiMove == Move.scissors ||
+          playerMove == Move.paper && aiMove == Move.rock ||
+          playerMove == Move.scissors && aiMove == Move.paper) {
+        print('You win');
+      } else {
+        print('You lose');
+      }
 
       print('Selected $input');
     } else if (input == "q") {
