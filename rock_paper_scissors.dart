@@ -11,6 +11,7 @@
  */
 
 import 'dart:io';
+import 'dart:math';
 
 enum Move {
   rock,
@@ -19,9 +20,12 @@ enum Move {
 }
 
 void main() {
+  final randomNumberGenerator = Random();
+
   while (true) {
     stdout.write('Rock, paper or scissors? (r/p/s) ');
     final input = stdin.readLineSync();
+
     if (input == "r" || input == "p" || input == "s") {
       var playerMove;
       if (input == "r") {
@@ -31,6 +35,8 @@ void main() {
       } else {
         playerMove = Move.scissors;
       }
+
+      final random = randomNumberGenerator.nextInt(3);
 
       print('Selected $input');
     } else if (input == "q") {
