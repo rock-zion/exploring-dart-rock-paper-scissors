@@ -52,7 +52,6 @@ void main() {
         print('You lose');
       }
 
-      print('Selected $input');
     } else if (input == "q") {
       print('Come back next time');
       break;
