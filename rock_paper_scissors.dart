@@ -37,6 +37,8 @@ void main() {
       }
 
       final random = randomNumberGenerator.nextInt(3);
+      final aiMove = Move.values[random];
+
 
       print('Selected $input');
     } else if (input == "q") {
