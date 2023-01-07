@@ -12,12 +12,26 @@
 
 import 'dart:io';
 
+enum Move {
+  rock,
+  paper,
+  scissors,
+}
 
 void main() {
   while (true) {
     stdout.write('Rock, paper or scissors? (r/p/s) ');
     final input = stdin.readLineSync();
     if (input == "r" || input == "p" || input == "s") {
+      var playerMove;
+      if (input == "r") {
+        playerMove = Move.rock;
+      } else if (input == "p") {
+        playerMove = Move.paper;
+      } else {
+        playerMove = Move.scissors;
+      }
+
       print('Selected $input');
     } else if (input == "q") {
       print('Come back next time');
